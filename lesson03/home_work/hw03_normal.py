@@ -2,7 +2,17 @@
 # Напишите функцию, возвращающую ряд Фибоначчи с n-элемента до m-элемента.
 # Первыми элементами ряда считать цифры 1 1
 
-def fibonacci(n):
+def fibonacci(n,m):
+    import math
+    while n <= m :
+        a = int((((1 + math.sqrt(5))/2)**n-((1 - math.sqrt(5))/2)**n)/
+                (math.sqrt(5)))
+        print (a)
+        n += 1
+
+x = fibonacci(4,18)
+print ("="*50)
+
 
 
 # Задача-2:
