@@ -3,14 +3,17 @@
 # до кол-ва знаков (кол-во знаков передается вторым аргументом).
 # Округление должно происходить по математическим правилам (0.6 --> 1, 0.4 --> 0).
 # Для решения задачи не используйте встроенные функции и функции из модуля math.
-
-def my_round(number, ndigits):
-    pass
-
+"""
+def my_round(num, ndig):
+    num = num*(10**ndig)+0.41
+    num = num//1
+    return num/(10**ndig)
 
 print(my_round(2.1234567, 5))
-print(my_round(2.1999967, 5))
-print(my_round(2.9999967, 5))
+print(my_round(2.123456789874, 3))
+print(my_round(2.1234567, 2))
+
+"""
 
 
 # Задание-2:
@@ -21,7 +24,7 @@ print(my_round(2.9999967, 5))
 
 def lucky_ticket(ticket_number):
     pass
-
+lucky_ticket = lambda x :(lambda x : 'yes' if sum(x[:3]) == sum(x[3:]) else 'no')(map(int, list(str(x))))
 
 print(lucky_ticket(123006))
 print(lucky_ticket(12321))
