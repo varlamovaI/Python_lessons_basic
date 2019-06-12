@@ -23,8 +23,18 @@ print(my_round(2.1234567, 2))
 # !!!P.S.: функция не должна НИЧЕГО print'ить
 
 def lucky_ticket(ticket_number):
-    lucky_ticket = lambda x :(lambda x : 'yes' if sum(x[:3]) == sum(x[3:]) else 'no')(map(int, list(str(x))))
-    pass
+    ticket_number = str(ticket_number)
+    t1 = ticket_number[:3]
+    t2 = ticket_number[3:]
+
+    sum1 = 0
+    sum2 = 0
+    for i in t1:
+        sum1 = sum1 + int(i)
+    for i in t2:
+        sum2 = sum2 + int(i)
+    if sum1 == sum2: print ('lucky')
+    else: print ('unlucky')
 
 print(lucky_ticket(123006))
 print(lucky_ticket(12321))
